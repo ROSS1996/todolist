@@ -1,8 +1,56 @@
 import './style.css'
+import Task from './tasks'
+
+const addBtn = document.getElementById('addBtn')
+
+const tasks = []
 
 const content = document.getElementById('content')
 
-const text = document.createElement('p')
-text.innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt dolores minima consectetur est corrupti libero quae delectus, deserunt, iste nesciunt inventore maxime! Animi ut fuga suscipit maxime maiores. Veniam eveniet deserunt aut voluptates placeat, quibusdam, atque alias, accusamus corrupti voluptas hic officia veritatis temporibus illo voluptate quos. Ea voluptatem esse omnis minus nulla culpa minima maiores quaerat modi? Nobis impedit deleniti cumque commodi incidunt alias eaque, deserunt laudantium beatae explicabo. Ut deserunt minus ad doloribus vitae soluta possimus praesentium incidunt. Explicabo quasi maiores quisquam, nulla id ipsa quibusdam, quos suscipit obcaecati possimus recusandae quia qui repudiandae non magnam soluta sed consectetur sint numquam iure rem officiis modi porro. Quos quo ipsum, porro molestiae, veniam quas sunt dicta cum nihil incidunt aperiam suscipit nam a qui numquam beatae mollitia exercitationem quaerat eius vel magnam inventore esse quisquam quia. Expedita mollitia quas eos nam voluptatibus fuga, quis, quia eveniet quisquam at nisi. Omnis laborum totam suscipit. Ipsum error minus distinctio labore alias illo! Ducimus dolores ea officiis optio totam minus non cum fugit distinctio suscipit, reprehenderit nesciunt. Impedit tenetur inventore quibusdam molestiae quae sit labore assumenda, recusandae ut. Ipsam ex accusantium ratione debitis, laborum in commodi, corrupti iste saepe quo eos quasi.'
+tasks.push(new Task('Teste', 'Description Test', '01-01-2020', 'mid'))
 
-content.appendChild(text)
+const loadAll = function () {
+  for (let i = 0; i < tasks.length; i++) {
+    const div = document.createElement('div')
+    div.classList.add('taskCard')
+    const title = document.createElement('p')
+    title.innerText = tasks[i].title
+    const description = document.createElement('p')
+    description.innerText = tasks[i].description
+    const dueDate = document.createElement('p')
+    dueDate.innerText = tasks[i].dueDate
+    const priority = document.createElement('p')
+    priority.innerText = tasks[i].priority
+    div.appendChild(title)
+    div.appendChild(description)
+    div.appendChild(dueDate)
+    div.appendChild(priority)
+    content.appendChild(div)
+  }
+}
+
+loadAll()
+
+addBtn.addEventListener('click', function () {
+  const title = document.getElementById('title').value
+  const description = document.getElementById('description').value
+  const dueDate = document.getElementById('dueDate').value
+  const priority = document.getElementById('priority').value
+  const test = new Task(title, description, dueDate, priority)
+  tasks.push(test)
+  const div = document.createElement('div')
+  div.classList.add('taskCard')
+  const DomTitle = document.createElement('p')
+  DomTitle.innerText = title
+  const DomDescription = document.createElement('p')
+  DomDescription.innerText = description
+  const DomDueDate = document.createElement('p')
+  DomDueDate.innerText = dueDate
+  const DomPriority = document.createElement('p')
+  DomPriority.innerText = priority
+  div.appendChild(DomTitle)
+  div.appendChild(DomDescription)
+  div.appendChild(DomDueDate)
+  div.appendChild(DomPriority)
+  content.appendChild(div)
+})

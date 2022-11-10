@@ -21,6 +21,15 @@ textarea, input, select {
     background-color: #ffffff;
 }
 
+button {
+    margin-top: 5px;
+}
+
+label {
+    font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 #menu {
     padding: 10px;
     border: 1px solid #000000;
@@ -41,4 +50,22 @@ textarea, input, select {
 
 #content {
     padding: 10px;
+}
+
+.taskCard {
+    width: 200px;
+    height: 200px;
+    background-color: olivedrab;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
 }
