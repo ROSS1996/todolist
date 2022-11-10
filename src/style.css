@@ -1,0 +1,44 @@
+header {
+    background-color: #000000;
+    color: #d3d3d3;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.3rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: underline;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    background-color: #d3d3d3;
+    height: 83vh;
+}
+
+textarea, input, select {
+    border-radius: 2px;
+    border: 1.5px solid #767676;
+    background-color: #ffffff;
+}
+
+#menu {
+    padding: 10px;
+    border: 1px solid #000000;
+}
+
+#menuOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    position: relative;
+    top: 20%;
+}
+
+#description {
+    height: 80px;
+}
+
+#content {
+    padding: 10px;
+}

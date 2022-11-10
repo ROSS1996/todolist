@@ -1,0 +1,26 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "Todo list",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && node my-tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ROSS1996/todolist.git"
+  },
+  "author": "Robson Santana",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/ROSS1996/todolist/issues"
+  },
+  "homepage": "https://github.com/ROSS1996/todolist#readme",
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "standard": "^17.0.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^4.10.0"
+  }
+}
