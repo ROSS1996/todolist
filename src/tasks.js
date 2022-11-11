@@ -6,6 +6,14 @@ class Task {
     this.priority = priority
     this.done = false
   }
+
+  setDone = function (status) {
+    if (status === true) {
+      this.done = true
+    } else {
+      this.done = false
+    }
+  }
 }
 
 export default Task
