@@ -63,11 +63,11 @@ label {
     height: fit-content;
     background-color: #e2e2e2;
     border: 1px solid #000000;
-    border-top: 10px solid #000000;;
+    border-top: 10px solid #000000;
     border-radius: 10px;
     display: grid;
     grid-template-columns: 100px 1fr;
-    grid-template-rows: 30px 1fr 30px 30px;
+    grid-template-rows: 30px 1fr 30px 30px 30px;
     padding: 4px;
 }
 
@@ -80,7 +80,7 @@ label {
     font-size: 1.5rem;
 }
 
-.descLabel, .dateLabel, .priorityLabel {
+.descLabel, .dateLabel, .priorityLabel, .statusLabel {
     grid-column: 1;
     padding-left: 10px;
 }
@@ -104,8 +104,29 @@ label {
     align-self: center;
 }
 
+.statusLabel {
+    grid-row: 5;
+    align-self: center;
+}
+
+.taskStatus {
+    grid-row: 5;
+    display: flex;
+    flex-direction: row;
+    justify-self: left;
+    align-self: center;
+}
+
 #content {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.attention {
+    border-top: 10px solid #ff0000 !important;
+}
+
+.done {
+    border-top: 10px solid #008504d0 !important;
 }
